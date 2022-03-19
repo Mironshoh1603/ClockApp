@@ -1,0 +1,82 @@
+:root {
+  --back-color: #282828;
+  --hand-color: #61afff;
+  --btn-color: black;
+  --btn-back: white;
+}
+
+html {
+  background: var(--back-color);
+  text-align: center;
+  font-size: 62.5%;
+}
+
+.btn {
+  padding: 2rem 4rem;
+  color: var(--btn-color);
+  background-color: var(--btn-back);
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-style: none;
+}
+.time,
+.date {
+  color: var(--btn-back);
+}
+.datedata {
+  background-color: var(--btn-back);
+  color: var(--btn-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  /* flex: 1; */
+
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  align-items: center;
+}
+.clock-face {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  padding: 2rem;
+  border: 7px solid #2b28d8;
+  border-radius: 50%;
+}
+
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: var(--hand-color);
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: linear;
+}
+
+.hand.hour-hand {
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.min-hand {
+  height: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second-hand {
+  background: #ee791a;
+  width: 45%;
+  height: 2px;
+}
