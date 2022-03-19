@@ -16,10 +16,9 @@ function setDate() {
   const hour = now.getHours();
   const hourDegrees = (hour / 12) * 360 + (mins / 60) * 30 + 90;
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-  time.textContent = `${now.toLocaleString("en-US", {
+  time.textContent = `${now.toLocaleString("uz-UZ", {
     hour: "numeric",
     minute: "numeric",
-    hour12: true,
   })}`;
   date.textContent = `${now.toLocaleString("en-US", {
     weekday: "long",
